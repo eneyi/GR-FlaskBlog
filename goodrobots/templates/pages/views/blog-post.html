@@ -1,0 +1,151 @@
+{%extends 'elements/views/base.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="{{post.post_title}}">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Good Robots - {{post.post_title}}">
+    <meta name="twitter:card" content="{{post.post_summary}}" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta name = "date" content="{{post.post_date}}">
+    <meta name = "author" content="{{post.post_author}}">
+    <meta name="summary" content="{{post.post_summary}}">
+    <meta name="category" content="{% for category in post.post_category %}{{category}} |{% endfor %}">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:url"   content="https://goodrobots.ai/blog_post/{{post.post_id}}">
+    <meta property="og:description" content="{{post.post_summary}}">
+    <meta property="og:image" content="{{post.post_image}}">
+     <title>
+        Archives | Good Robots | {{post.post_title}}
+    </title>
+    {% endblock %}
+{% block content %}
+
+<section class="section blog-post" style="padding-top:0;margin-top:0;">
+        <img class="bg-image section-image" src="{{post.post_image}}" alt=""
+             style="opacity:0.2;position:absolute;">
+        <div class="container-fluid">
+            <div class="row" style="width:80%;margin:auto;background-image:">
+                <div class="floating-box" style="width:100%;background-image: url('assets/img/posts/whatisthemetaverse.jpg'), linear-gradient(rgba(13,13,13,1),rgba(13,13,13,1));background-blend-mode: overlay;">
+
+                    <h2 class="lead text-white p-5" style="font-size:4vw;width:90%;font-family:Coustard;"> {{post.post_title}}</h2>
+                    <hr style="width:100%;">
+
+                    <div class="container textbox">
+                        <p class="float-left article-date-read"><span><i class="fa-regular fa-calendar"></i> {{post.post_date}}</span></p>
+                        <p class="float-left article-date-read author"><span><i class="fa-regular fa-user"></i>{{post.post_author}}</span></p>
+                        <p class="float-right article-date-read"><span><i class="fa-regular fa-clock"></i> {{post.post_read_time}}</span></p>
+
+
+                        <p class="float-right article-date-read"><span><i class="fa-regular fa-eye"></i>103</span></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="section" style="padding-top:0;margin-top:0;">
+        <img class="bg-image section-image" src="/static/assets/img/ill/trialb.png" alt=""
+             style="opacity:0.05;position:absolute;">
+        <div class="container-fluid pt-50">
+            <div class="row pt-50" style="width:60%;margin:auto;">
+                <div class="card col-md-12 mx-auto text-center">
+                    <div class="row">
+                        <div class="article">
+
+
+                            <div class="article-body">
+                                <div class="highlights" style="width:90%;">
+                                    <h4>Key Highlights of this Post</h4>
+                                    <ul class="list-grou">
+                                        {% for highlight in post.post_buzz %}
+                                        <li class="list-grou-item"><p style="font-size:0.8vw;">{{highlight}}</p></li>
+                                        {% endfor %}
+                                    </ul>
+
+                                </div>
+
+                                <p class="article-tangline"> <i class="fa fa-arrow-right"></i>{{post.post_summary}}</p>
+
+                                <hr class="article-divider">
+                                {{post.post_content | safe | markdown }}
+                            </div>
+                            <hr class="article-divider">
+                            {% if session['logged_in'] %}
+
+                            <p>You are reading this post as the admin {{session['username']}} of Good Robots. You can Login
+                                <a href="{{url_for('views.admin')}}">here</a> </p>
+
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    {% include 'elements/views/subscribe.html' %}
+<section class="section" style="padding-top:0px;">
+    <div class="subscribe-line">
+        <img class="bg-image section-image" src="/static/assets/img/ill/trialb.png" alt=""
+             style="opacity:0.05;position:absolute;">
+        <div class="social-line social-line-blue text-center">
+            <div class="container">
+                <div class="row justify-content-center social">
+                    <a href="https://twitter.com/GoodRobotsAI" class="btn btn-twitter btn-round">
+                        <i class="fab fa-twitter"></i> Twitter · 2.5k
+                    </a>
+                    <a href="https://post.news/@/goodrobots" class="btn btn-twitter btn-round">
+                        <i class="fab fa-twitter"></i> PostNews · 2.5k
+                    </a>
+                    <a href="https://goodrobots.substack.com/" class="btn btn-round" style="background:orange;">
+                        <i class="fab fa-facebook-square"></i> Substack· 3.2k
+                    </a>
+                    <a href="https://medium.com/@thegoodrobotsai" class="btn btn-medium btn-round text-white" style="background:black;">
+                        <i class="fab fa-medium"></i> Medium · 1.2k
+                    </a>
+                    <a href="https://mastodon.social/@goodrobots" class="btn btn-round text-white" style="background:purple;">
+                        <i class="fab fa-mastodon text-white"></i> Mastodon · 1.8k
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container-fluid">
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-c02c79da-2499-4323-9406-fc4f3e02d49b"></div>
+    </div>
+</section>
+    <section class="section" style="width:80%;margin:auto;">
+        <div class="container">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://goodrobots.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </section>
+
+{% endblock %}

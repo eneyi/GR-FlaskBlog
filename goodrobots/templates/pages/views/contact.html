@@ -1,0 +1,79 @@
+{% extends 'elements/views/base_compact.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="Contact Us | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Contact Us | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:url"   content="https://goodrobots.ai">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Contact Us | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block form %}
+          <form role="form" class="card bg-secondary p-3" id="contact-form" method="POST" action="{{url_for('auth.contact')}}">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>First name</label>
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-circle-08"></i></span>
+                        </div>
+                        {{form.firstname(class="form-control")}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Last name</label>
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-tag"></i></span>
+                        </div>
+                        {{form.lastname(class="form-control")}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Email address</label>
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    {{form.email(class="form-control")}}
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Subject</label>
+                  {{form.subject(class="form-control form-control-alternative")}}
+                </div>
+                <div class="form-group">
+                  <label>Your message</label>
+                  {{form.message(class="form-control form-control-alternative")}}
+                </div>
+                <div class="row">
+                  <div class="col-md-6 ml-auto">
+                    {{form.submit(class="btn btn-primary pull-right")}}
+                  </div>
+                </div>
+              </div>
+            {{form.csrf_token}}
+            {% include 'elements/admin/messages.html' %}
+            </form>
+{% endblock %}

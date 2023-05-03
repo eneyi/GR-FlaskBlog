@@ -1,0 +1,61 @@
+{%extends 'elements/views/base.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="Posts in {{project.project_title}} Project | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Posts in {{project.project_title}} Project | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Posts in {{project.project_title}} Project | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block content %}
+
+<section class="section">
+    <div class="container-fluid">
+            <img class="bg-image section-image" src="/static/assets/img/pages/projects_white.png" alt=""
+                 style="opacity:0.05;position:absolute;">
+            <div class="row">
+                <div class="container" style="padding-top:80px;">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto text-center">
+                            <h2 class="display-2">{{project.project_title | upper}}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="floating-box bg-default">
+                            <div class="box text-center">
+
+                            </div>
+                            <h2 class="lead text-white p-5">{{project.project_desc}}</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+    <section class="section" style="padding-top:80px;">
+        <div class="container-fluid" style="width:85%;margin:auto;">
+            <h2>All posts tagged #{{project.project_slug}}</h2>
+            {% include 'elements/views/blog_masonry.html'%}
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                 {% include 'elements/views/pagination.html' %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

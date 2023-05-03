@@ -1,0 +1,363 @@
+{%extends 'elements/views/base.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="Home | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Home | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We write on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Home | Good Robots - Musings For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block content %}
+<section class="blogs-4">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="card card-blog card-background" data-animation="zooming">
+                    <div class="full-background"
+                         style="background-image: url('/static/assets/img/sections/athena.jpg"></div>
+                    <a href="javascript:;">
+                        <div class="card-body">
+                            <div class="content-bottom">
+                                <h6 class="card-category top text-white opacity-8 justify-item-center">#Algorithmic Justice</h6>
+                                <h5 class="card-title top" style="text-align:center;font-size:15px;">Unstable Diffusion
+                                    - The Image Generation AI Creating
+                                    Asian Pornography</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card card-blog card-background" data-animation="zooming">
+                    <div class="full-background"
+                         style="background-image: url('/static/assets/img/sections/thomas.jpg"></div>
+                    <a href="javascript:;">
+                        <div class="card-body">
+                            <div class="content-bottom">
+                                <h6 class="card-category top text-white opacity-8">#CTNC</h6>
+                                <h5 class="card-title top">The Ethical Responsibility of Sex For Sale Websites</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card card-blog card-background" data-animation="zooming">
+                    <div class="full-background"
+                         style="background-image: url('/static/assets/img/sections/odin.jpg"></div>
+                    <a href="javascript:;">
+                        <div class="card-body">
+                            <div class="content-bottom">
+                                <h6 class="card-category top text-white opacity-8">#Data Privacy</h6>
+                                <h5 class="card-title top">Is Your Smart Home Spying On You? The Hidden Data
+                                    laundering Network in IOT Providers</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="card card-blog card-background" data-animation="zooming">
+                    <div class="full-background"
+                         style="background-image: url('/static/assets/img/sections/twk-tt.jpg"></div>
+                    <a href="javascript:;">
+                        <div class="card-body">
+                            <div class="content-bottom">
+                                <h6 class="card-category top text-white opacity-8">#big tech</h6>
+                                <h5 class="card-title top">GoogleKick Starts its Network of Paid Influence ahead
+                                    ofSupreme Court Case</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="section pt-0 mt-0 pb-0 mb-0">
+    <img class="bg-image section-image img-fluid" src="/static/assets/img/ill/bg19.png" alt=""
+         style="opacity:0.06;position:absolute;">
+    <div class="container" style="padding-top:120px;padding-bottom:120px;">
+        <div class="row">
+            <h3 class="subheader" style="text-align:center;margin:auto;font-family:Stardos Stencil;font-size:40px;"><span
+                    style="color:#034447; font-weight:bolder;">Good</span> <span
+                    style="color:#fab50a; font-weight:bolder;">Robots</span> - Musings for Safety <br> In
+                Cyberspace.</h3>
+            <br>
+            <h5 style="text-align:center;margin:auto;">Real-world impact for <br> safety cyberspace. We write on the topics that
+                matter in AI, Cyber Crime, Data Privacy and Big Tech.</h5>
+        </div>
+        <br><br>
+        <div class="row">
+            <a class="btn btn-grdefault" href="{{url_for('views.categories')}}" target="_blank"
+               style="width:50%;margin:auto;">View Our Works</a>
+        </div>
+
+    </div>
+</section>
+<section class="section" style="padding-top:0;margin-top:0;">
+    <img class="bg-image section-image img-fluid" src="/static/assets/img/ill/bg19.png" alt=""
+         style="opacity:0.06;position:absolute;">
+    <div class="container-fluid">
+        <div class="row" style="padding-top:0px;width:84%;margin:auto;">
+            <div class="col-md-12 mx-auto text-center">
+                <div class="row" style="padding-top:20px;">
+                    <div class="card col-md-4 text-white bg-default">
+                        <img class="card-img" src="/static/assets/img/ill/inn.svg" alt="Card image">
+                        <div class="card-img-overlay d-flex align-items-center">
+                            <div class="content">
+                                <h5 class="h2 card-title text-white mb-2">{{featured.post_title}}</h5>
+                                <p class="card-description">{{featured.post_summary[0:100]}}</p>
+                                <p class="card-text text-sm font-weight-bold">{{featured.post_date}}</p>
+                                <p class="card-text text-sm font-weight-bold"><a
+                                        href="{{url_for('views.blog_post', post_id=featured.post_id)}}"
+                                        class="text-white">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-md-8">
+                        <img class="img-fluid" src="{{featured.post_image}}" style="height:auto;max-width:100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% include 'elements/views/subscribe.html'%}
+<section class="section" style="padding-top:100px;">
+    <div class="container">
+        <div class="row">
+            {% for category in categories[0:3] %}
+            {% set padding = loop.index*10 %}
+
+            <div class="col-lg-4 col-md-6" style="padding-top:{{padding}}px;">
+                <div class="card card-blog text-center" style="background:#034447;padding-top:{{padding}}px;">
+                    <img class="img pattern rounded" src="/static/assets/img/ill/{{category.cat_image}}">
+                    <div class="card-body">
+                        <h4 class="display-4 text-white" style="font-family:Stardos Stencil;">{{category.cat_title | capitalize}}</h4>
+                        <p class="lead text-white mt-0">{{category.cat_desc[0:100]}}...</p>
+                        <a href="{{url_for('views.category', category=category.cat_slug)}}" class="btn btn-link px-0"
+                           style="color:#fab50a;font-weight:bolder;">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="section" style="padding-top:50px;">
+    <div class="container-fluid" style="width:85%;margin:auto;">
+        <h2 class="display-2" style="font-family:Stardos Stencil;font-weight:bolder;">Latest Blog Posts</h2>
+        <div class="col-md-12" style="padding-top:50px;">
+            <div class="row">
+                <br>
+                {% for post in posts[0:6] %}
+                <div class="col-lg-4 col-md-6 pt-0 pb-0 mt-0 mb-0 d-flex">
+                    <div class="card card-blog" data-background="pattern" style="border:2px solid #034447;">
+                        <a href="javascript:;">
+                            <img class="img pattern rounded" src="/static/assets/img/ill/p8.svg">
+                        </a>
+                        <img class="img-top" src="{{post.post_image}}"
+                             style="width:100%;height:inherit;" alt="">
+                        <div class="card-body">
+
+                            <h5 class="blog-grid-card-title card-title"
+                                style="font-family:'Coustard';text-align:center;">
+                                <a href="{{url_for('views.blog_post', post_id=post.post_id)}}">{{post.post_title}}</a>
+                            </h5>
+                            <p class="card-date-readtime-details"><i class="fa-regular fa-calendar"></i>
+                                <span
+                                        class="date">{{post.post_date}}</span> <span class="read-time stats-right"
+                                                                                     style="float:right;"><i
+                                        class="fa-regular fa-clock"></i> {{post.post_read_time}} read</span>
+                            </p>
+                            <p class="card-description blog-grid-card-desc"
+                               style="font-size:16px;color:grey;text-align:center;">
+                                {{post.post_summary[0:150]}}...
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="author">
+                        <span>{% for cat in post.post_category %} {{cat}}, {% endfor %}  <i class="fa-solid fa-heart"
+                                                                                            style="color:pink"></i></span>
+
+                            </div>
+                            <div class="stats stats-right blog-grid-card-footer-icons" style="font-size:22px;">
+                                <a href="" data-toggle="modal" data-target="#modal_{{post.post_id}}"><i
+                                        class="fa fa-blog"></i></a>
+                                <a href="{{url_for('views.blog_post', post_id=post.post_id)}}" data-toggle="tooltip"
+                                   data-placement="top" title="Read This Article"><i class="fa-regular fa-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="modal_{{post.post_id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"
+                                    style="text-align:center; font-weight:bold;color:#034447;">{{post.post_title}}</h5>
+                                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i
+                                        class="fa fa-times"></i></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container" style="width:100%; ">
+                                    <img src="{{post.post_image}}" alt="" class="img-top img-responsive"
+                                         style="width:100%;border: 3px solid green;">
+                                </div>
+
+                                <hr>
+                                <h6>Post Highlights</h6>
+                                {% for buzz in post.post_buzz %}
+
+                                {{buzz}}<br>
+                                <br>
+                                {% endfor %}
+                                <br>
+                                <div class="container">
+                                    <div class="col-md-6"><img src="/static/assets/img/brand/green.png" alt=""
+                                                               style="width:80%; margin:auto;">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{%for tag in post.post_category %} #{{tag}} {% endfor %}</p>
+                                        <p>{%for keyword in post.post_keywords %} #{{keyword}} {% endfor %}</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="modal-footer">
+                                <p style="font-size:30px;"><i class="fa fa-share"></i> <i
+                                        class="fa-brands fa-twitter"></i> <i
+                                        class="fa-brands fa-instagram"></i> <i class="fa-brands fa-mastodon"></i> <i
+                                        class="fa-brands fa-watsapp"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+        <div class="row">
+            <a style="width:30%;margin:auto;" class="btn btn-grprimary btn-block" href="{{url_for('views.archive')}}">All
+                Blog
+                Posts
+            </a>
+        </div>
+    </div>
+</section>
+<div class="subscribe-line bg-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-10 mx-auto">
+                <div class="text-center">
+                    <h4 class="title text-white" style="padding-top:10px;font-family:Stardos Stencil;font-size:28px;">Subscribe to our Newsletter</h4>
+                    <p class="description text-white">
+                        Join our newsletter and get news in your inbox every week! We hate spam too, so no worries
+                        about this.
+                    </p>
+                </div>
+                <div class="card card-raised card-form-horizontal">
+                    <div class="card-body">
+                        <form method="POST" action="{{url_for('auth.subscribe')}}" name="subscribe" id="subscribe">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        </div>
+                                        {{sform.fullname(class="form-control")}}
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+                                        {{sform.email(class="form-control")}}
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    {{sform.submit(class="btn btn-grprimary btn-block")}}
+
+                                </div>
+                            </div>
+                            {{sform.csrf_token}}
+                        </form>
+                        {% include 'elements/admin/messages.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="section" style="padding-top:0px;">
+    <div class="subscribe-line">
+        <img class="bg-image section-image" src="/static/assets/img/ill/trialb.png" alt=""
+             style="opacity:0.05;position:absolute;">
+        <div class="social-line social-line-blue text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12" style="padding-top:80px;">
+                        <h4 class="title mb-4">Thank you for your support!</h4>
+                    </div>
+                </div>
+                <div class="row justify-content-center social">
+                    <a href="https://twitter.com/GoodRobotsAI" class="btn btn-twitter btn-round">
+                        <i class="fab fa-twitter"></i> Twitter · 2.5k
+                    </a>
+                    <a href="https://post.news/@/goodrobots" class="btn btn-twitter btn-round">
+                        <i class="fab fa-twitter"></i> PostNews · 2.5k
+                    </a>
+                    <a href="https://goodrobots.substack.com/" class="btn btn-round" style="background:orange;">
+                        <i class="fab fa-facebook-square"></i> Substack· 3.2k
+                    </a>
+                    <a href="https://medium.com/@thegoodrobotsai" class="btn btn-medium btn-round text-white" style="background:black;">
+                        <i class="fab fa-medium"></i> Medium · 1.2k
+                    </a>
+                    <a href="https://mastodon.social/@goodrobots" class="btn btn-round text-white" style="background:purple;">
+                        <i class="fab fa-mastodon text-white"></i> Mastodon · 1.8k
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+
+    <div class="container-fluid">
+       <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-59c93df1-2776-4347-b341-4864ab46cfc4"></div>
+    </div>
+
+</section>
+{% endblock %}

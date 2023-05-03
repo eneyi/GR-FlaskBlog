@@ -1,0 +1,52 @@
+<div class="subscribe-line">
+    <img src="/static/assets/img/ill/bg18.png" alt=""
+         style="opacity:0.2;position:absolute;" alt="" class="bg-image">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-10 mx-auto">
+                <div class="text-center">
+                    <h4 class="title" style="padding-top:10px;font-family:Stardos Stencil;font-size:28px;">Subscribe to our Newsletter</h4>
+                    <p class="description">
+                        Join our newsletter and get news in your inbox every week! We hate spam too, so no worries
+                        about this.
+                    </p>
+                </div>
+                <div class="card card-raised card-form-horizontal">
+                    <div class="card-body">
+                        <form method="POST" action="{{url_for('auth.subscribe')}}" name="subscribe" id="subscribe">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        </div>
+                                        {{sform.fullname(class="form-control")}}
+                                    </div>
+                                </div>
+
+                            </div>
+                             <br>
+                            <div class="row">
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                                        </div>
+                                        {{sform.email(class="form-control")}}
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div class="col-sm-4">
+                                    {{sform.submit(class="btn btn-grprimary btn-block")}}
+
+                                </div>
+                            </div>{{sform.csrf_token}}
+                    </form>
+                        {% include 'elements/admin/messages.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>

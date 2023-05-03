@@ -1,0 +1,60 @@
+<!-- Navbar -->
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg bg-default navbar-dark position-sticky top-0  py-2">
+    <div class="container">
+        <a class="navbar-brand mr-lg-5" href="{{ url_for('views.home') }}">
+            <img src="/static/assets/img/brand/white.png" style="width:200px;height:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
+                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+            <div class="navbar-collapse-header">
+                <div class="row">
+                    <div class="col-6 collapse-brand">
+                        <a href="{{ url_for('views.home') }}">
+                            <img src="/static/assets/img/brand/white.png" style="width:200px;height:40px;">
+                        </a>
+                    </div>
+                    <div class="col-6 collapse-close">
+                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global"
+                                aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+                <li class="nav-item">
+                    <a href="{{ url_for('views.home') }}" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('views.projects')}}" class="nav-link">
+                        Projects
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{url_for('views.archive')}}" class="nav-link">
+                        Archive
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/about" class="nav-link">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item nav-btn">
+                    <a href="{{url_for('views.contact')}}" class="btn btn-outline-white donate-btn btn-navgr text-white">
+                        <span class="nav-link-inner--text donate-btn text-white"><i class="fa fa-envelope"></i> Contact</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Navbar -->

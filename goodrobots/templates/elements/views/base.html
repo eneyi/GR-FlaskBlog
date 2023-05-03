@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% block meta_tags %}
+    <meta name="title"  content="Good Robots - For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Good Robots - For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:url"   content="https://goodrobots.ai">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for a safer cyberspace. We write on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Good Robots - Musings For Safety In Cyberspace
+    </title>
+    {% endblock %}
+    <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+
+    <!--     Fonts and icons     -->
+    <link href="/static/assets/css/googlefonts_open_sans.css" rel="stylesheet">
+
+    <!-- Nucleo Icons -->
+    <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet"/>
+    <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet"/>
+    <!-- Font Awesome Icons -->
+    <link href="/static/assets/css/font-awesome.css" rel="stylesheet"/>
+    <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet"/>
+    <!-- CSS Files -->
+    <link href="/static/assets/css/argon-design-system.css?v=1.0.3" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/b552ca419b.js" crossorigin="anonymous"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Stardos+Stencil&family=Black+Ops&family=Balsamiq+Sans&family=Coiny&family=Coustard&family=Fascinate+Inline&family=Fredoka+One&family=IM+Fell+English&family=Rubik+Moonrocks&family=Vast+Shadow&family=Sono&family=Asap&family=Bona+Nova&display=swap');
+h2.display-2{font-family:'Coustard';font-size:45px;}x
+</style>
+
+</head>
+<body class="blog-posts">
+{% include 'elements/views/navbar.html'%}
+
+<div class="wrapper">
+    {% block content %}
+
+
+    {% endblock %}
+</div>
+{% include 'elements/views/footer.html'%}
+{% include 'elements/views/corejs.html'%}
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('goodrobots', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#fcbf47',
+    'floating-chat.donateButton.text-color': '#323842'
+  });
+</script>
+</body>
+</html>

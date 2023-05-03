@@ -1,0 +1,90 @@
+{%extends 'elements/views/base.html' %}
+{% block meta_tags %}
+    <meta name="title"  content="Categories | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Categories | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:url"   content="https://goodrobots.ai">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Categories | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block content %}
+<section class="section header">
+    <div class="container-fluid">
+        <img class="bg-image section-image" src="/static/assets/img/ill/trialb.png" alt=""
+             style="opacity:0.05;position:absolute;">
+        <div class="row">
+            <div class="container" style="padding-top:0px;">
+                <div class="row">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h2 class="display-2"></h2>
+                        <img src="/static/assets/img/pages/categories_white.png" style="max-width:350px;"
+                             class="img-responsive">
+                        <h5>Research Journalism for Safety in Cyberspace</h5>
+                        <br>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="project-2 my-5">
+        <div class="container">
+            <div class="row">
+                {% for category in categories %}
+                <div class="col-md-6 col-lg-6 pt-0 pb-0 mt-0 mb-0 d-flex">
+                    <div class="card card-blog" data-background="pattern" style="border: 2px solid #034447;">
+                    <a href="javascript:;">
+                        <img class="img pattern rounded" src="/static/assets/img/ill/p8.svg">
+                    </a>
+                    <div class="card-body">
+                        <h6 class="card-category text-danger" style="color:{{category.cat_color}}">
+                            <i class="ni ni-badge" style="color:#034447;"></i> #{{category.cat_slug}}
+                        </h6>
+                        <h5 class="card-title">
+                            <a href="javascript:;">{{category.cat_title}}</a>
+                        </h5>
+                        <p class="card-description">
+                            {{category.cat_desc[0:200]}}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="author">
+                            <a href="{{url_for('views.category', category=category.cat_slug)}}" class="btn btn-grdefault">Read More</a>
+                        </div>
+                        <div class="stats stats-right">
+                            <i class="ni ni-favourite-28" style="color:{{category.cat_color}};"></i> 10.4K ·
+                            <i class="ni ni-archive-2" style="color:{{category.cat_color}};"></i> 425
+                        </div>
+                    </div>
+                </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <br>
+        </div>
+    </div>
+</section>
+<section class="section subscribe">
+    {%include 'elements/views/subscribe.html'%}
+</section>
+{% endblock %}

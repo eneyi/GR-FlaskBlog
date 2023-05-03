@@ -1,0 +1,100 @@
+{%extends 'elements/views/base.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="Terms of Service | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Terms of Service | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai/terms-of-service" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Terms of Service | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block content %}
+
+<section class="section header">
+
+    <div class="container-fluid">
+        <img class="bg-image section-image" src="/static/assets/img/ill/trialb.png" alt=""
+             style="opacity:0.05;position:absolute;">
+        <div class="row">
+            <div class="container" style="padding-top:20px;">
+                <div class="row">
+                    <div class="col-md-8 mx-auto text-center">
+                        <h2 class="display-2"></h2>
+                        <img src="/static/assets/img/pages/tos_white.png" style="max-width:350px;"
+                             class="img-responsive">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="section about" style="width:80%;margin:auto;">
+    <div class="container card" style="max-width:65%;margin:auto;border:2px solid #034447;padding:50px;">
+
+        <h2 class="page-h2-header">Introduction</h2>
+        Welcome to Good Robots, a platform dedicated to discussing the latest developments in technology, artificial
+        intelligence, data privacy and cyberspace. Before you start exploring our website, please take a moment to read
+        through our Terms of Service. By accessing and using this website, you agree to be bound by these terms.
+
+        <h2 class="page-h2-header">Personal Data Protection</h2>
+        We take the privacy and security of your personal data very seriously. Our website is designed to comply with
+        regional data protection laws, such as the General Data Protection Regulation (GDPR) in the European Union. We
+        will never collect, use, or share your personal data without your consent, unless required to do so by law.
+
+        <h2 class="page-h2-header">Personal Data Sharing</h2>
+        We will never share your personal data or website usage data with any third party without your explicit consent.
+        We do not monitise our content with affiliates, ad placements or any other form of monitisation that requires
+        sharing user personal data. We may use web subcriber data to improve our website's performance, functionality,
+        or to better understand our audience's interests and preferences.
+
+        <h2 class="page-h2-header">Non-Commercial Use</h2>
+        All datasets, images, and articles published on our website are protected by copyright law. You are free to use
+        and share these materials for non-commercial purposes, provided that you give credit to our website and link
+        back to the original source. You may not modify, distribute, or sell our content without our prior written
+        consent.
+
+        <h2 class="page-h2-header">Disclaimer of Liability</h2>
+        The information provided on our website is for educational and informational purposes only. We do not make any
+        warranties or representations, express or implied, about the completeness, accuracy, reliability, suitability,
+        or availability of the information, products, services, or related graphics contained on the website for any
+        purpose. Any reliance you place on such information is therefore strictly at your own risk. Our datasets cannot
+        be sold or used in any material for commercial purposes.
+
+        <h2 class="page-h2-header">Modification of Terms</h2>
+        We reserve the right to modify these Terms of Service at any time, without prior notice. By continuing to use
+        our website after the modifications become effective, you agree to be bound by the revised terms.
+
+        <h2 class="page-h2-header">Governing Law and Jurisdiction</h2>
+        These Terms of Service shall be governed by and construed in accordance with the laws of the United States,
+        Europe and Canada. Any disputes arising out of or in connection with these terms shall be subject to the
+        exclusive jurisdiction of the courts of Canada.
+
+        <br>
+        <p>
+        Thank you for visiting Good Robots. If you have any questions or concerns about our Terms of Service or privacy
+            policy, please contact us at <a href="mailto:fair@goodrobots.ai">fair@goodrobots.ai</a></p>.
+    </div>
+</section>
+
+<section class="section subscribe">
+    {%include 'elements/views/subscribe.html'%}
+</section>
+{% endblock %}
+

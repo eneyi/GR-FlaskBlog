@@ -1,0 +1,79 @@
+{%extends 'elements/views/base.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="Posts | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Posts | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Posts | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block content %}
+
+<section class="section header">
+    {%include 'elements/views/single-page-header.html'%}
+</section>
+
+<section class="section blog-filter">
+    <div class="container-fluid">
+        <div class="col-md-12 col-lg-12">
+            <div class="col-md-8 content-bar float-right" style="display:inline-block;position:relative;">
+                {% include 'elements/views/blog_masonry.html'%}
+            </div>
+            <div class="col-md-4 sidebar float-left">
+                <div class="col-md-4">
+
+                    <div class="mb-3">
+                        <small class="text-uppercase font-weight-bold">Checkboxes</small>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input class="custom-control-input" id="customCheck1" type="checkbox">
+                        <label class="custom-control-label" for="customCheck1">
+                            <span>Unchecked</span>
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input class="custom-control-input" id="customCheck2" type="checkbox" checked="">
+                        <label class="custom-control-label" for="customCheck2">
+                            <span>Checked</span>
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input class="custom-control-input" id="customCheck3" type="checkbox" disabled="">
+                        <label class="custom-control-label" for="customCheck3">
+                            <span>Disabled Unchecked</span>
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input class="custom-control-input" id="customCheck4" type="checkbox" checked="" disabled="">
+                        <label class="custom-control-label" for="customCheck4">
+                            <span>Disabled Checked</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section subscribe">
+    {%include 'elements/views/subscribe.html'%}
+</section>
+
+
+{% endblock %}

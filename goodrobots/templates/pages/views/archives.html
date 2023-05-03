@@ -1,0 +1,75 @@
+{%extends 'elements/views/base.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="Archives | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Archives | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:url"   content="https://goodrobots.ai">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Archives | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block content %}
+<section class="section header">
+
+<div class="container-fluid">
+            <img class="bg-image section-image" src="/static/assets/img/ill/trialb.png" alt=""
+                 style="opacity:0.05;position:absolute;">
+            <div class="row">
+                <div class="container" style="padding-top:0px;">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto text-center">
+                            <h2 class="display-2"></h2>
+                            <img src="/static/assets/img/pages/archives_white.png" style="max-width:350px;"
+                             class="img-responsive">
+                            <h5>Research Journalism for Safety in Cyberspace</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</section>
+
+<section class="section pt-0 pb-0" style="width:80%;margin:auto;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                 {% include 'elements/views/pagination.html' %}
+            </div>
+        </div>
+    </div>
+
+<div class="container-fluid">
+               <div class="row">
+                    <div class="col-md-12">
+                    {% include 'elements/views/blog_masonry.html'%}
+                </div>
+               </div>
+
+            </div>
+</section>
+
+
+
+<section class="section subscribe">
+    {%include 'elements/views/subscribe.html'%}
+</section>
+
+{% endblock %}

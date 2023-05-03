@@ -1,0 +1,235 @@
+{% extends 'elements/admin/base.html' %}
+{% block page_title %} {{act}} {{subject}} {% endblock %}
+{% block sub_entity %} {{act}} {{subject}} {% endblock %}
+{% block content_title %} {{act}} {{subject}} {% endblock %}
+{% block content %}
+<div class="container">
+    {% if subject == "Post" %}
+    <form action="" method="POST" enctype="multipart/form-data" name="edit_post" id="edit_post">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="post_title" class="form-control-label">Post Title</label>
+                    {{form.post_title(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="post-project" class="form-control-label">Project</label>
+                    {{form.post_project(class="form-control")}}
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="post-type" class="form-control-label">Post Type</label>
+                    {{form.post_type(class="form-control")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="post-date" class="form-control-label">Published Date</label>
+                    <br>
+                    {{form.post_date(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="post-category" class="form-control-label">Post category</label>
+                {{form.post_category(class="form-control")}}
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="post-status" class="form-control-label">Post Status</label>
+                    {{form.post_status(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="post-image" class="form-control-label">Featured Image</label>
+                    <input type="file" class="form-control" id="post-image" name="post-image" />
+                    <p>Current Image <a href="{{post.post_image}}">{{post.post_image}}</a></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="post-datasets" class="form-control-label">Post Datasets</label>
+                    {{form.post_datasets(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="post-content" class="form-control-label">Post Content</label>
+                    {{form.post_content(class="form-control")}}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-center">
+                                        {{form.submit(class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0")}}
+                                    </div>
+            </div>
+        </div>
+        {{ form.csrf_token }}
+    </form>
+    {% elif subject == "Category" %}
+    <form action="" method="POST" enctype="multipart/form-data" name="edit_category" id="edit_category">
+         <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cat-title" class="form-control-label">Category Name</label>
+                    {{form.cat_title(class="form-control")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cat-desc" class="form-control-label">Category Description</label>
+                    {{form.cat_desc(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cat-color" class="form-control-label">Category Color</label>
+                    <input type="color" class="form-control" id="cat_color" name="cat_color" required/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cat-date" class="form-control-label">Category Date</label>
+                    {{form.cat_date(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cat-image" class="form-control-label">Category Image path</label>
+                    {{form.cat_image(class="form-control")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="cat-status" class="form-control-label">Publically List This Category?</label>
+                    {{form.cat_status(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 pull-right">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">{{act}} Category
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{ form.csrf_token }}
+    </form>
+    {% elif subject =="Project" %}
+    <form action="" method="POST" enctype="multipart/form-data" name="add_category" id="edit_project">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="project-title" class="form-control-label">Project Title</label>
+                    {{form.project_title(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="project-author" class="form-control-label">Project Author</label>
+                    {{form.project_author(class="form-control")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="project-date" class="form-control-label">Category Date</label>
+                    {{form.project_date(class="form-control")}}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="project-desc" class="form-control-label">Project Description</label>
+                    {{form.project_desc(class="form-control")}}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 pull-right">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Add Project
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{ form.csrf_token }}
+    </form>
+    {% elif subject =="Image" %}
+    <form action="" method="POST" enctype="multipart/form-data" name="add_category" id="edit_image">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="image-title" class="form-control-label">Image Title</label>
+                    {{form.image_title(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="image-alt" class="form-control-label">Image Alt</label>
+                    {{form.image_alt(class="form-control")}}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="image_date" class="form-control-label">Image Date</label>
+                    {{form.image_date(class="form-control")}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="image-file" class="form-control-label">Image File</label>
+                    <input type="file" class="form-control" id="image-file" name="image-file" />
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 pull-right">
+                <div class="text-center">
+                    <button type="submit" class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Edit Image
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{ form.csrf_token }}
+    </form>
+    {% endif %}
+    {% include 'elements/admin/messages.html' %}
+</div>
+{% endblock %}

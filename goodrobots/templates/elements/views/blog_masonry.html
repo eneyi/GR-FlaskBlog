@@ -1,0 +1,93 @@
+<div class="col-md-12" style="padding-top:50px;">
+    <div class="row">
+        <br>
+        {% for post in posts %}
+        <div class="col-lg-4 col-md-6 pt-0 pb-0 mt-0 mb-0 d-flex">
+            <div class="card card-blog" data-background="pattern" style="border:2px solid #034447;">
+                <a href="javascript:;">
+                    <img class="img pattern rounded" src="/static/assets/img/ill/p8.svg">
+                </a>
+                <img class="img-top" src="{{post.post_image}}"
+                     style="width:100%;height:inherit;" alt="">
+                <div class="card-body">
+
+                    <h5 class="blog-grid-card-title card-title" style="font-family:'Coustard';text-align:center;">
+                        <a href="{{url_for('views.blog_post', post_id=post.post_id)}}">{{post.post_title}}</a></h5>
+                    <p class="card-date-readtime-details"><i class="fa-regular fa-calendar" style="color:#FFC64F;"></i> <span
+                            class="date">{{post.post_date}}</span> <span class="read-time stats-right"
+                                                                         style="float:right;"><i class="fa-regular fa-clock"
+                                                                                                 style="color:#FFC64F;"></i> {{post.post_read_time}} read</span>
+                    </p>
+                    <p class="card-description blog-grid-card-desc"
+                       style="font-size:16px;color:grey;text-align:center;">
+                        {{post.post_summary[0:150]}}...
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <div class="author">
+                        <span>{% for cat in post.post_category %} {{cat}}, {% endfor %}  <i class="fa-solid fa-heart"
+                                                                                            style="color:pink"></i></span>
+
+                    </div>
+                    <div class="stats stats-right blog-grid-card-footer-icons" style="font-size:22px;">
+                        <a href="" data-toggle="modal" data-target="#modal_{{post.post_id}}"><i
+                                class="fa-solid fa-blog"></i></a>
+                        <a href="{{url_for('views.blog_post', post_id=post.post_id)}}" data-toggle="tooltip"
+                           data-placement="top" title="Read This Article"><i class="fa-regular fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="modal_{{post.post_id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel"
+                            style="text-align:center; font-weight:bold;color:#034447;">{{post.post_title}}</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"><i
+                                class="fa fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container" style="width:100%; ">
+                            <img src="{{post.post_image}}" alt="" class="img-top img-responsive"
+                                 style="width:100%;border: 3px solid green;">
+                        </div>
+
+                        <hr>
+                        <h6>Post Hghlights</h6>
+                        {% for i in post.post_buzz %}
+
+                        {{i}}
+                        <br>
+                        {% endfor %}
+                        <br>
+                        <div class="container">
+                            <div class="col-md-6"><img src="/static/assets/img/brand/green.png" alt=""
+                                                       style="width:80%; margin:auto;">
+                            </div>
+                            <div class="col-md-6 pull-right">{%for tag in post.post_category %} #{{tag}} {% endfor %}
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Thisisapostbuzz"><i class="fa-brands fa-twitter"></i></a>
+                        <p style="font-size:30px;"><i class="fa fa-share"></i> <i class="fa-brands fa-twitter"></i> <i
+                                class="fa-brands fa-instagram"></i> <i class="fa-brands fa-mastodon"></i> <i
+                                class="fa-brands fa-watsapp"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>

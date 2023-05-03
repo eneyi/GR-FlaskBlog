@@ -1,0 +1,88 @@
+{%extends 'elements/views/base.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="About | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="About | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:url"   content="https://goodrobots.ai">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        About | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+
+{% block content %}
+
+<section class="section header">
+
+<div class="container-fluid">
+            <img class="bg-image section-image" src="/static/assets/img/ill/trialb.png" alt=""
+                 style="opacity:0.05;position:absolute;">
+            <div class="row">
+                <div class="container" style="padding-top:20px;">
+                    <div class="row">
+                        <div class="col-md-8 mx-auto text-center">
+                            <h2 class="display-2">About Us</h2>
+                            <img src="/static/assets/img/brand/green.png" style="width:400px;height:80px;" class="img-responsive">
+                            <h5>Research Journalism for Safety in Cyberspace</h5>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</section>
+
+<section class="section about" style="width:80%;margin:auto;">
+    <div class="container card" style="max-width:65%;margin:auto;border:2px solid #034447;padding:50px;">
+
+<h2>Introduction</h2>
+        <p>We are researchers that provide evidence-based reporting on the impact of technology and its applications on society, politics, and culture. In 2023, Good Robots was launched to raise awareness about the negative impact of <span class="gr-inline">technology</span>, artificial intelligence, and use/miseuse of cyberspace on our daily lives.</p>
+
+        <p>Covering the convergence of these areas with society, poilitics, and culture, from large technology corporations, consumer products and services that rely on algorithms, and business use of cyberspace.</p>
+
+
+<h2>Why Good Robots</h2>
+        <p>Increasingly, societal infrastructure, decisions, and services are **automated** and reliant on **technologies** deployed in **cyberspace**. Over the last two decades, technology has taken over basic human activities. Unfortunately, there is a significant gap between technology adoption and awareness of the consequences of adoption. This unbridled reliance on technology, combined with a lack of understanding of its implications, exposes users to exploitation and crime online.</p>
+
+        <p>Good robots aims to bridge this gap by shining a light on technology use/misuse, raising awareness about the implications of adopting new technology, and ensuring that those who create, deploy, and use consumer technology adhere to regional ethical standards in their use.</p>
+
+<h2>What we do (Our Process)</h2>
+        <p>Our methods are data-driven research and scientific reporting. We investigate topics covering Aritifical Intelligence, Data Privacy, Big Tech Coporations and Transnational Crimes in Cyberspace. Every claim we make is backed by corresponding data and/or evidence.</p>
+
+
+<h2>Our Team</h2>
+
+        <p>Our mission is to learn the truth about how these large corporations use technology and the impact it has on our society. Our dedicated team of researchers is dedicated to investigating these topics and providing in-depth analysis of the most recent developments in these areas.</p>
+        <p>We are unaffiliated with any company or organisation, and our mission is to inform and educate the public so that they can make informed decisions about data, technology, and cyberspace.  Learn about us, <a href="{{url_for('views.home')}}">sign up to get new reports</a> immediately they are released. You think we should be investigating something?<a href="{{url_for('views.contact')}}">Contact us here.</a> Help us continue the good work we do by leaving a <i class="fa-solid fa-cookie-bite" style="color:#034447"></i>
+            <a href="{{url_for('views.donate')}}">cookie in our cookie jar </a><i class="fa-solid fa-jar" style="color:#034447"></i>.</p>
+
+Thank you for stopping by! We hope to see you again soon.
+        <hr>
+        <iframe id='kofiframe' src='https://ko-fi.com/goodrobots/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='goodrobots'></iframe>
+
+    </div>
+
+</section>
+
+<section class="section subscribe">
+    {%include 'elements/views/subscribe.html'%}
+</section>
+{% endblock %}
+

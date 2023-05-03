@@ -1,0 +1,38 @@
+{%extends 'elements/views/base_compact.html' %}
+    {% block meta_tags %}
+    <meta name="title"  content="Error {{error}} | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="brand"  content="Good Robots">
+    <meta  name="description" content="Error {{error}} | Good Robots - Research Journalism For Safety In Cyberspace">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GoodRobotsAI" />
+    <meta name="twitter:creator" content="@GoodRobotsAI" />
+    <meta property="og:url" content="https://goodrobots.ai" />
+    <meta name = "date" content="date">
+    <meta name = "author" content="Good Robots">
+    <meta property="og:type" content="site">
+    <meta property="og:site_name" content="Good Robots">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title"   content="Good Robots">
+    <meta property="og:description" content="We provide evidence to drive
+                    real-world impact for an equal, fair and safe cyberspace. We create awareness on the topics that
+                    matter in AI, Cyber Crime, Data Privacy and Big Tech.">
+    <meta property="og:image" content="/static/assets/img/brand/green.png">
+
+     <title>
+        Error {{error}} | Good Robots - Research Journalism For Safety In Cyberspace
+    </title>
+    {% endblock %}
+{% block content %}
+<div class="page-header page-500">
+      <div class="page-header-image" style="background-image: url('/static/assets/img/ill/500.svg');"></div>
+      <div class="container low">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h4 class="display-4">{{error}} Error</h4>
+            <p class="lead">We are sorry. This was unexpected.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+ {% exclude 'elements/views/footer.html'%}
+{% endblock %}
